@@ -8,7 +8,7 @@ while(True):
         location_info = str(input("Location: ").rstrip())
         maxresult_info = int(input("Maximum nuber of results: ").rstrip())
         url = "https://developers.zomato.com/api/v2.1/search?entity_type=city&q=" + location_info + "&count=" + str(maxresult_info) + "&order=asc"
-        headers = {"user-key": "8d239e786498ac4aa890cbe688628e4d"}
+        headers = {"user-key": "YOUR API KEY GOES HERE"}
         html = requests.get(url, headers=headers)
         html_json = html.json()
         resturant_details = html_json['restaurants']
